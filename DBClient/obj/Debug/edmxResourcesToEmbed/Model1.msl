@@ -1,0 +1,250 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="abifdiplomdbfinalModelStoreContainer" CdmEntityContainer="Entities2">
+    <EntitySetMapping Name="AktBenutzers">
+      <EntityTypeMapping TypeName="abifdiplomdbfinalModel.AktBenutzer">
+        <MappingFragment StoreEntitySet="AktBenutzer">
+          <ScalarProperty Name="Akb_Dbuser" ColumnName="Akb_Dbuser" />
+          <ScalarProperty Name="Akb_Session" ColumnName="Akb_Session" />
+          <ScalarProperty Name="Akb_BenutzerID" ColumnName="Akb_BenutzerID" />
+          <ScalarProperty Name="Akb_Schule" ColumnName="Akb_Schule" />
+          <ScalarProperty Name="Akb_Abteilung" ColumnName="Akb_Abteilung" />
+          <ScalarProperty Name="Akb_Benutzeraccount" ColumnName="Akb_Benutzeraccount" />
+          <ScalarProperty Name="Akb_Usernewupd" ColumnName="Akb_Usernewupd" />
+          <ScalarProperty Name="Akb_Benutzernachname" ColumnName="Akb_Benutzernachname" />
+          <ScalarProperty Name="Akb_Benutzervorname" ColumnName="Akb_Benutzervorname" />
+          <ScalarProperty Name="Akb_Benutzername" ColumnName="Akb_Benutzername" />
+          <ScalarProperty Name="Akb_Benutzernamevz" ColumnName="Akb_Benutzernamevz" />
+          <ScalarProperty Name="Akb_Benutzernametitel" ColumnName="Akb_Benutzernametitel" />
+          <ScalarProperty Name="Akb_Benutzernametitelvz" ColumnName="Akb_Benutzernametitelvz" />
+          <ScalarProperty Name="Akb_User_neu" ColumnName="Akb_User_neu" />
+          <ScalarProperty Name="Akb_Date_neu" ColumnName="Akb_Date_neu" />
+          <ScalarProperty Name="Akb_User_upd" ColumnName="Akb_User_upd" />
+          <ScalarProperty Name="Akb_Date_upd" ColumnName="Akb_Date_upd" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DiplBens">
+      <EntityTypeMapping TypeName="abifdiplomdbfinalModel.DiplBen">
+        <MappingFragment StoreEntitySet="DiplBens">
+          <ScalarProperty Name="Dib_Diplomprojekt" ColumnName="Dib_Diplomprojekt" />
+          <ScalarProperty Name="Dib_Benutzer" ColumnName="Dib_Benutzer" />
+          <ScalarProperty Name="Dib_Isthauptverantwortlich" ColumnName="Dib_Isthauptverantwortlich" />
+          <ScalarProperty Name="Dib_Datetime_new" ColumnName="Dib_Datetime_new" />
+          <ScalarProperty Name="Dib_Stundenanzahl" ColumnName="Dib_Stundenanzahl" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Diplomprojektes">
+      <EntityTypeMapping TypeName="abifdiplomdbfinalModel.Diplomprojekte">
+        <MappingFragment StoreEntitySet="Diplomprojekte">
+          <ScalarProperty Name="Di_ID" ColumnName="Di_ID" />
+          <ScalarProperty Name="Di_Abteilung" ColumnName="Di_Abteilung" />
+          <ScalarProperty Name="Di_Ausbildungsschwerpunkt" ColumnName="Di_Ausbildungsschwerpunkt" />
+          <ScalarProperty Name="Di_Titel" ColumnName="Di_Titel" />
+          <ScalarProperty Name="Di_Untertitel" ColumnName="Di_Untertitel" />
+          <ScalarProperty Name="Di_Aufgabenstellung" ColumnName="Di_Aufgabenstellung" />
+          <ScalarProperty Name="Di_Zielsetzung" ColumnName="Di_Zielsetzung" />
+          <ScalarProperty Name="Di_geplantes_Ergebnis" ColumnName="Di_geplantes_Ergebnis" />
+          <ScalarProperty Name="Di_Meilenstein" ColumnName="Di_Meilenstein" />
+          <ScalarProperty Name="Di_Rechtliche_Regelung" ColumnName="Di_Rechtliche_Regelung" />
+          <ScalarProperty Name="Di_Praesentationsname" ColumnName="Di_Praesentationsname" />
+          <ScalarProperty Name="Di_Titel_Englisch" ColumnName="Di_Titel_Englisch" />
+          <ScalarProperty Name="Di_Zusammenfassung" ColumnName="Di_Zusammenfassung" />
+          <ScalarProperty Name="Di_Zusammenfassung_Englisch" ColumnName="Di_Zusammenfassung_Englisch" />
+          <ScalarProperty Name="Di_Typ" ColumnName="Di_Typ" />
+          <ScalarProperty Name="Di_Stichwoerter" ColumnName="Di_Stichwoerter" />
+          <ScalarProperty Name="Di_Stichwoerter_Englisch" ColumnName="Di_Stichwoerter_Englisch" />
+          <ScalarProperty Name="Di_Link_Projektseite" ColumnName="Di_Link_Projektseite" />
+          <ScalarProperty Name="Di_Umfeld" ColumnName="Di_Umfeld" />
+          <ScalarProperty Name="Di_Sperrvermerk" ColumnName="Di_Sperrvermerk" />
+          <ScalarProperty Name="Di_Schule" ColumnName="Di_Schule" />
+          <ScalarProperty Name="Dis_Ablaufschritt" ColumnName="Dis_Ablaufschritt" />
+          <ScalarProperty Name="Dis_Start" ColumnName="Dis_Start" />
+          <ScalarProperty Name="As_Bezeichnung" ColumnName="As_Bezeichnung" />
+          <ScalarProperty Name="As_Beschreibung" ColumnName="As_Beschreibung" />
+          <ScalarProperty Name="As_Benutzerart" ColumnName="As_Benutzerart" />
+          <ScalarProperty Name="Akb_Session" ColumnName="Akb_Session" />
+          <ScalarProperty Name="Akb_Benutzerid" ColumnName="Akb_Benutzerid" />
+          <ScalarProperty Name="Akb_Benutzername" ColumnName="Akb_Benutzername" />
+          <ScalarProperty Name="akb_Benutzeraccount" ColumnName="akb_Benutzeraccount" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="InfoAbteilungens">
+      <EntityTypeMapping TypeName="abifdiplomdbfinalModel.InfoAbteilungen">
+        <MappingFragment StoreEntitySet="InfoAbteilungen">
+          <ScalarProperty Name="Abt_ID" ColumnName="Abt_ID" />
+          <ScalarProperty Name="Abt_Bezeichnung" ColumnName="Abt_Bezeichnung" />
+          <ScalarProperty Name="Abt_AV" ColumnName="Abt_AV" />
+          <ScalarProperty Name="Abt_Schule" ColumnName="Abt_Schule" />
+          <ScalarProperty Name="Ben_Nachname" ColumnName="Ben_Nachname" />
+          <ScalarProperty Name="Ben_Vorname" ColumnName="Ben_Vorname" />
+          <ScalarProperty Name="Ben_Name" ColumnName="Ben_Name" />
+          <ScalarProperty Name="Ben_Namevz" ColumnName="Ben_Namevz" />
+          <ScalarProperty Name="Ben_Nametitel" ColumnName="Ben_Nametitel" />
+          <ScalarProperty Name="Ben_Nametitelvz" ColumnName="Ben_Nametitelvz" />
+          <ScalarProperty Name="Akb_Session" ColumnName="Akb_Session" />
+          <ScalarProperty Name="Akb_Benutzerid" ColumnName="Akb_Benutzerid" />
+          <ScalarProperty Name="Akb_Benutzername" ColumnName="Akb_Benutzername" />
+          <ScalarProperty Name="akb_Benutzeraccount" ColumnName="akb_Benutzeraccount" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Infobenutzers">
+      <EntityTypeMapping TypeName="abifdiplomdbfinalModel.Infobenutzer">
+        <MappingFragment StoreEntitySet="Infobenutzer">
+          <ScalarProperty Name="Ben_ID" ColumnName="Ben_ID" />
+          <ScalarProperty Name="Ben_Schule" ColumnName="Ben_Schule" />
+          <ScalarProperty Name="Ben_Titelvor" ColumnName="Ben_Titelvor" />
+          <ScalarProperty Name="Ben_Vorname" ColumnName="Ben_Vorname" />
+          <ScalarProperty Name="Ben_Nachname" ColumnName="Ben_Nachname" />
+          <ScalarProperty Name="Ben_Titelnach" ColumnName="Ben_Titelnach" />
+          <ScalarProperty Name="Ben_Email" ColumnName="Ben_Email" />
+          <ScalarProperty Name="Ben_Klasse" ColumnName="Ben_Klasse" />
+          <ScalarProperty Name="Ben_Benutzerart" ColumnName="Ben_Benutzerart" />
+          <ScalarProperty Name="Ben_Accountname" ColumnName="Ben_Accountname" />
+          <ScalarProperty Name="Ben_Passwort" ColumnName="Ben_Passwort" />
+          <ScalarProperty Name="Ben_Aktiv" ColumnName="Ben_Aktiv" />
+          <ScalarProperty Name="Bea_Nr" ColumnName="Bea_Nr" />
+          <ScalarProperty Name="Bea_Name" ColumnName="Bea_Name" />
+          <ScalarProperty Name="Ben_IstinDiplomprojekten" ColumnName="Ben_IstinDiplomprojekten" />
+          <ScalarProperty Name="Ben_IstAV" ColumnName="Ben_IstAV" />
+          <ScalarProperty Name="Ben_IstDirektor" ColumnName="Ben_IstDirektor" />
+          <ScalarProperty Name="Ben_IstLsi" ColumnName="Ben_IstLsi" />
+          <ScalarProperty Name="Akb_Session" ColumnName="Akb_Session" />
+          <ScalarProperty Name="Akb_Benutzerid" ColumnName="Akb_Benutzerid" />
+          <ScalarProperty Name="Akb_Benutzername" ColumnName="Akb_Benutzername" />
+          <ScalarProperty Name="akb_Benutzeraccount" ColumnName="akb_Benutzeraccount" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="InfoDiplomprojektes">
+      <EntityTypeMapping TypeName="abifdiplomdbfinalModel.InfoDiplomprojekte">
+        <MappingFragment StoreEntitySet="InfoDiplomprojekte">
+          <ScalarProperty Name="Di_ID" ColumnName="Di_ID" />
+          <ScalarProperty Name="Di_Abteilung" ColumnName="Di_Abteilung" />
+          <ScalarProperty Name="Di_Ausbildungsschwerpunkt" ColumnName="Di_Ausbildungsschwerpunkt" />
+          <ScalarProperty Name="Di_Titel" ColumnName="Di_Titel" />
+          <ScalarProperty Name="Di_Untertitel" ColumnName="Di_Untertitel" />
+          <ScalarProperty Name="Di_Aufgabenstellung" ColumnName="Di_Aufgabenstellung" />
+          <ScalarProperty Name="Di_Zielsetzung" ColumnName="Di_Zielsetzung" />
+          <ScalarProperty Name="Di_geplantes_Ergebnis" ColumnName="Di_geplantes_Ergebnis" />
+          <ScalarProperty Name="Di_Meilenstein" ColumnName="Di_Meilenstein" />
+          <ScalarProperty Name="Di_Rechtliche_Regelung" ColumnName="Di_Rechtliche_Regelung" />
+          <ScalarProperty Name="Di_Praesentationsname" ColumnName="Di_Praesentationsname" />
+          <ScalarProperty Name="Di_Titel_Englisch" ColumnName="Di_Titel_Englisch" />
+          <ScalarProperty Name="Di_Zusammenfassung" ColumnName="Di_Zusammenfassung" />
+          <ScalarProperty Name="Di_Zusammenfassung_Englisch" ColumnName="Di_Zusammenfassung_Englisch" />
+          <ScalarProperty Name="Di_Typ" ColumnName="Di_Typ" />
+          <ScalarProperty Name="Di_Stichwoerter" ColumnName="Di_Stichwoerter" />
+          <ScalarProperty Name="Di_Stichwoerter_Englisch" ColumnName="Di_Stichwoerter_Englisch" />
+          <ScalarProperty Name="Di_Link_Projektseite" ColumnName="Di_Link_Projektseite" />
+          <ScalarProperty Name="Di_Umfeld" ColumnName="Di_Umfeld" />
+          <ScalarProperty Name="Di_Sperrvermerk" ColumnName="Di_Sperrvermerk" />
+          <ScalarProperty Name="Di_Schule" ColumnName="Di_Schule" />
+          <ScalarProperty Name="Dis_Ablaufschritt" ColumnName="Dis_Ablaufschritt" />
+          <ScalarProperty Name="Dis_Start" ColumnName="Dis_Start" />
+          <ScalarProperty Name="As_Bezeichnung" ColumnName="As_Bezeichnung" />
+          <ScalarProperty Name="As_Beschreibung" ColumnName="As_Beschreibung" />
+          <ScalarProperty Name="As_Benutzerart" ColumnName="As_Benutzerart" />
+          <ScalarProperty Name="Akb_Session" ColumnName="Akb_Session" />
+          <ScalarProperty Name="Akb_Benutzerid" ColumnName="Akb_Benutzerid" />
+          <ScalarProperty Name="Akb_Benutzername" ColumnName="Akb_Benutzername" />
+          <ScalarProperty Name="akb_Benutzeraccount" ColumnName="akb_Benutzeraccount" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="InfoDiplomschrittes">
+      <EntityTypeMapping TypeName="abifdiplomdbfinalModel.InfoDiplomschritte">
+        <MappingFragment StoreEntitySet="InfoDiplomschritte">
+          <ScalarProperty Name="Di_ID" ColumnName="Di_ID" />
+          <ScalarProperty Name="Di_Titel" ColumnName="Di_Titel" />
+          <ScalarProperty Name="Dis_Ablaufschritt" ColumnName="Dis_Ablaufschritt" />
+          <ScalarProperty Name="Dis_Ben_ID" ColumnName="Dis_Ben_ID" />
+          <ScalarProperty Name="Dis_Start" ColumnName="Dis_Start" />
+          <ScalarProperty Name="Dis_Kommentar" ColumnName="Dis_Kommentar" />
+          <ScalarProperty Name="As_Order" ColumnName="As_Order" />
+          <ScalarProperty Name="As_Bezeichnung" ColumnName="As_Bezeichnung" />
+          <ScalarProperty Name="As_Beschreibung" ColumnName="As_Beschreibung" />
+          <ScalarProperty Name="As_Benutzerart" ColumnName="As_Benutzerart" />
+          <ScalarProperty Name="Akb_Session" ColumnName="Akb_Session" />
+          <ScalarProperty Name="Akb_Benutzerid" ColumnName="Akb_Benutzerid" />
+          <ScalarProperty Name="Akb_Benutzername" ColumnName="Akb_Benutzername" />
+          <ScalarProperty Name="akb_Benutzeraccount" ColumnName="akb_Benutzeraccount" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionName="abifdiplomdbfinalModel.Store.DelimitedSplit8K" FunctionImportName="DelimitedSplit8K">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="abifdiplomdbfinalModel.DelimitedSplit8K_Result">
+          <ScalarProperty Name="ItemNumber" ColumnName="ItemNumber" />
+          <ScalarProperty Name="Item" ColumnName="Item" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionName="abifdiplomdbfinalModel.Store.GetNums" FunctionImportName="GetNums">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="abifdiplomdbfinalModel.GetNums_Result">
+          <ScalarProperty Name="n" ColumnName="n" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="benutzeraccverify" FunctionName="abifdiplomdbfinalModel.Store.benutzeraccverify" />
+    <FunctionImportMapping FunctionImportName="benutzerlogin" FunctionName="abifdiplomdbfinalModel.Store.benutzerlogin" />
+    <FunctionImportMapping FunctionImportName="benutzerlogout" FunctionName="abifdiplomdbfinalModel.Store.benutzerlogout" />
+    <FunctionImportMapping FunctionImportName="DiplomprojektInsert" FunctionName="abifdiplomdbfinalModel.Store.DiplomprojektInsert">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="abifdiplomdbfinalModel.DiplomprojektInsert_Result">
+          <ScalarProperty Name="Di_ID" ColumnName="Di_ID" />
+          <ScalarProperty Name="Di_Abteilung" ColumnName="Di_Abteilung" />
+          <ScalarProperty Name="Di_Ausbildungsschwerpunkt" ColumnName="Di_Ausbildungsschwerpunkt" />
+          <ScalarProperty Name="Di_Titel" ColumnName="Di_Titel" />
+          <ScalarProperty Name="Di_Untertitel" ColumnName="Di_Untertitel" />
+          <ScalarProperty Name="Di_Aufgabenstellung" ColumnName="Di_Aufgabenstellung" />
+          <ScalarProperty Name="Di_Zielsetzung" ColumnName="Di_Zielsetzung" />
+          <ScalarProperty Name="Di_geplantes_Ergebnis" ColumnName="Di_geplantes_Ergebnis" />
+          <ScalarProperty Name="Di_Meilenstein" ColumnName="Di_Meilenstein" />
+          <ScalarProperty Name="Di_Rechtliche_Regelung" ColumnName="Di_Rechtliche_Regelung" />
+          <ScalarProperty Name="Di_Praesentationsname" ColumnName="Di_Praesentationsname" />
+          <ScalarProperty Name="Di_Titel_Englisch" ColumnName="Di_Titel_Englisch" />
+          <ScalarProperty Name="Di_Zusammenfassung" ColumnName="Di_Zusammenfassung" />
+          <ScalarProperty Name="Di_Zusammenfassung_Englisch" ColumnName="Di_Zusammenfassung_Englisch" />
+          <ScalarProperty Name="Di_Typ" ColumnName="Di_Typ" />
+          <ScalarProperty Name="Di_Stichwoerter" ColumnName="Di_Stichwoerter" />
+          <ScalarProperty Name="Di_Stichwoerter_Englisch" ColumnName="Di_Stichwoerter_Englisch" />
+          <ScalarProperty Name="Di_Link_Projektseite" ColumnName="Di_Link_Projektseite" />
+          <ScalarProperty Name="Di_Umfeld" ColumnName="Di_Umfeld" />
+          <ScalarProperty Name="Di_Sperrvermerk" ColumnName="Di_Sperrvermerk" />
+          <ScalarProperty Name="Di_Schule" ColumnName="Di_Schule" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="Diplschritthoch" FunctionName="abifdiplomdbfinalModel.Store.Diplschritthoch" />
+    <FunctionImportMapping FunctionImportName="Diplschrittrunter" FunctionName="abifdiplomdbfinalModel.Store.Diplschrittrunter" />
+    <FunctionImportMapping FunctionImportName="sp_alterdiagram" FunctionName="abifdiplomdbfinalModel.Store.sp_alterdiagram" />
+    <FunctionImportMapping FunctionImportName="sp_creatediagram" FunctionName="abifdiplomdbfinalModel.Store.sp_creatediagram" />
+    <FunctionImportMapping FunctionImportName="sp_dropdiagram" FunctionName="abifdiplomdbfinalModel.Store.sp_dropdiagram" />
+    <FunctionImportMapping FunctionImportName="sp_helpdiagramdefinition" FunctionName="abifdiplomdbfinalModel.Store.sp_helpdiagramdefinition">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="abifdiplomdbfinalModel.sp_helpdiagramdefinition_Result">
+          <ScalarProperty Name="version" ColumnName="version" />
+          <ScalarProperty Name="definition" ColumnName="definition" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_helpdiagrams" FunctionName="abifdiplomdbfinalModel.Store.sp_helpdiagrams">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="abifdiplomdbfinalModel.sp_helpdiagrams_Result">
+          <ScalarProperty Name="Database" ColumnName="Database" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Owner" ColumnName="Owner" />
+          <ScalarProperty Name="OwnerID" ColumnName="OwnerID" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_renamediagram" FunctionName="abifdiplomdbfinalModel.Store.sp_renamediagram" />
+    <FunctionImportMapping FunctionImportName="sp_upgraddiagrams" FunctionName="abifdiplomdbfinalModel.Store.sp_upgraddiagrams" />
+  </EntityContainerMapping>
+</Mapping>

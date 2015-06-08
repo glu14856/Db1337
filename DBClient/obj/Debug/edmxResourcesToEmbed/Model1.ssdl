@@ -1,0 +1,328 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="abifdiplomdbfinalModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="AktBenutzer">
+    <Key>
+      <PropertyRef Name="Akb_Dbuser" />
+      <PropertyRef Name="Akb_BenutzerID" />
+    </Key>
+    <Property Name="Akb_Dbuser" Type="nvarchar" MaxLength="250" Nullable="false" />
+    <Property Name="Akb_Session" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Akb_BenutzerID" Type="int" Nullable="false" />
+    <Property Name="Akb_Schule" Type="int" />
+    <Property Name="Akb_Abteilung" Type="int" />
+    <Property Name="Akb_Benutzeraccount" Type="nvarchar" MaxLength="50" />
+    <Property Name="Akb_Usernewupd" Type="nvarchar" MaxLength="50" />
+    <Property Name="Akb_Benutzernachname" Type="nvarchar" MaxLength="250" />
+    <Property Name="Akb_Benutzervorname" Type="nvarchar" MaxLength="250" />
+    <Property Name="Akb_Benutzername" Type="nvarchar" MaxLength="250" />
+    <Property Name="Akb_Benutzernamevz" Type="nvarchar" MaxLength="250" />
+    <Property Name="Akb_Benutzernametitel" Type="nvarchar" MaxLength="250" />
+    <Property Name="Akb_Benutzernametitelvz" Type="nvarchar" MaxLength="250" />
+    <Property Name="Akb_User_neu" Type="nvarchar" MaxLength="50" />
+    <Property Name="Akb_Date_neu" Type="datetime" />
+    <Property Name="Akb_User_upd" Type="nvarchar" MaxLength="50" />
+    <Property Name="Akb_Date_upd" Type="datetime" />
+  </EntityType>
+  <EntityType Name="DiplBens">
+    <Key>
+      <PropertyRef Name="Dib_Diplomprojekt" />
+      <PropertyRef Name="Dib_Benutzer" />
+    </Key>
+    <Property Name="Dib_Diplomprojekt" Type="int" Nullable="false" />
+    <Property Name="Dib_Benutzer" Type="int" Nullable="false" />
+    <Property Name="Dib_Isthauptverantwortlich" Type="bit" Nullable="false" />
+    <Property Name="Dib_Datetime_new" Type="datetime" />
+    <Property Name="Dib_Stundenanzahl" Type="int" />
+  </EntityType>
+  <EntityType Name="Diplomprojekte">
+    <Key>
+      <PropertyRef Name="Di_ID" />
+    </Key>
+    <Property Name="Di_ID" Type="int" Nullable="false" />
+    <Property Name="Di_Abteilung" Type="int" Nullable="false" />
+    <Property Name="Di_Ausbildungsschwerpunkt" Type="nvarchar" MaxLength="250" />
+    <Property Name="Di_Titel" Type="nvarchar" MaxLength="250" Nullable="false" />
+    <Property Name="Di_Untertitel" Type="nvarchar" MaxLength="250" />
+    <Property Name="Di_Aufgabenstellung" Type="nvarchar" MaxLength="2000" />
+    <Property Name="Di_Zielsetzung" Type="nvarchar" MaxLength="2000" />
+    <Property Name="Di_geplantes_Ergebnis" Type="nvarchar" MaxLength="2000" />
+    <Property Name="Di_Meilenstein" Type="nvarchar" MaxLength="2000" />
+    <Property Name="Di_Rechtliche_Regelung" Type="nvarchar" MaxLength="2000" />
+    <Property Name="Di_Praesentationsname" Type="nvarchar" MaxLength="250" />
+    <Property Name="Di_Titel_Englisch" Type="nvarchar" MaxLength="250" />
+    <Property Name="Di_Zusammenfassung" Type="nvarchar" MaxLength="2000" />
+    <Property Name="Di_Zusammenfassung_Englisch" Type="nvarchar" MaxLength="2000" />
+    <Property Name="Di_Typ" Type="nchar" MaxLength="1" />
+    <Property Name="Di_Stichwoerter" Type="nvarchar" MaxLength="200" />
+    <Property Name="Di_Stichwoerter_Englisch" Type="nvarchar" MaxLength="200" />
+    <Property Name="Di_Link_Projektseite" Type="nvarchar" MaxLength="100" />
+    <Property Name="Di_Umfeld" Type="nvarchar" MaxLength="400" />
+    <Property Name="Di_Sperrvermerk" Type="bit" />
+    <Property Name="Di_Schule" Type="int" Nullable="false" />
+    <Property Name="Dis_Ablaufschritt" Type="int" Nullable="false" />
+    <Property Name="Dis_Start" Type="datetime" Nullable="false" />
+    <Property Name="As_Bezeichnung" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="As_Beschreibung" Type="nvarchar" MaxLength="200" />
+    <Property Name="As_Benutzerart" Type="nvarchar" MaxLength="10" Nullable="false" />
+    <Property Name="Akb_Session" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Akb_Benutzerid" Type="int" Nullable="false" />
+    <Property Name="Akb_Benutzername" Type="nvarchar" MaxLength="250" />
+    <Property Name="akb_Benutzeraccount" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="InfoAbteilungen">
+    <Key>
+      <PropertyRef Name="Abt_ID" />
+    </Key>
+    <Property Name="Abt_ID" Type="int" Nullable="false" />
+    <Property Name="Abt_Bezeichnung" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="Abt_AV" Type="int" Nullable="false" />
+    <Property Name="Abt_Schule" Type="int" Nullable="false" />
+    <Property Name="Ben_Nachname" Type="nvarchar" MaxLength="250" />
+    <Property Name="Ben_Vorname" Type="nvarchar" MaxLength="250" />
+    <Property Name="Ben_Name" Type="nvarchar" MaxLength="501" />
+    <Property Name="Ben_Namevz" Type="nvarchar" MaxLength="501" />
+    <Property Name="Ben_Nametitel" Type="nvarchar" MaxLength="1003" />
+    <Property Name="Ben_Nametitelvz" Type="nvarchar" MaxLength="1003" />
+    <Property Name="Akb_Session" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Akb_Benutzerid" Type="int" Nullable="false" />
+    <Property Name="Akb_Benutzername" Type="nvarchar" MaxLength="250" />
+    <Property Name="akb_Benutzeraccount" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Infobenutzer">
+    <Key>
+      <PropertyRef Name="Ben_ID" />
+    </Key>
+    <Property Name="Ben_ID" Type="int" Nullable="false" />
+    <Property Name="Ben_Schule" Type="int" Nullable="false" />
+    <Property Name="Ben_Titelvor" Type="nvarchar" MaxLength="250" />
+    <Property Name="Ben_Vorname" Type="nvarchar" MaxLength="250" />
+    <Property Name="Ben_Nachname" Type="nvarchar" MaxLength="250" Nullable="false" />
+    <Property Name="Ben_Titelnach" Type="nvarchar" MaxLength="250" />
+    <Property Name="Ben_Email" Type="nvarchar" MaxLength="250" Nullable="false" />
+    <Property Name="Ben_Klasse" Type="nvarchar" MaxLength="50" />
+    <Property Name="Ben_Benutzerart" Type="nvarchar" MaxLength="10" />
+    <Property Name="Ben_Accountname" Type="nvarchar" MaxLength="250" />
+    <Property Name="Ben_Passwort" Type="nvarchar" MaxLength="250" />
+    <Property Name="Ben_Aktiv" Type="bit" />
+    <Property Name="Bea_Nr" Type="nvarchar" MaxLength="10" Nullable="false" />
+    <Property Name="Bea_Name" Type="nvarchar" MaxLength="200" />
+    <Property Name="Ben_IstinDiplomprojekten" Type="int" />
+    <Property Name="Ben_IstAV" Type="int" Nullable="false" />
+    <Property Name="Ben_IstDirektor" Type="int" Nullable="false" />
+    <Property Name="Ben_IstLsi" Type="int" Nullable="false" />
+    <Property Name="Akb_Session" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Akb_Benutzerid" Type="int" Nullable="false" />
+    <Property Name="Akb_Benutzername" Type="nvarchar" MaxLength="250" />
+    <Property Name="akb_Benutzeraccount" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="InfoDiplomprojekte">
+    <Key>
+      <PropertyRef Name="Di_ID" />
+    </Key>
+    <Property Name="Di_ID" Type="int" Nullable="false" />
+    <Property Name="Di_Abteilung" Type="int" Nullable="false" />
+    <Property Name="Di_Ausbildungsschwerpunkt" Type="nvarchar" MaxLength="250" />
+    <Property Name="Di_Titel" Type="nvarchar" MaxLength="250" Nullable="false" />
+    <Property Name="Di_Untertitel" Type="nvarchar" MaxLength="250" />
+    <Property Name="Di_Aufgabenstellung" Type="nvarchar" MaxLength="2000" />
+    <Property Name="Di_Zielsetzung" Type="nvarchar" MaxLength="2000" />
+    <Property Name="Di_geplantes_Ergebnis" Type="nvarchar" MaxLength="2000" />
+    <Property Name="Di_Meilenstein" Type="nvarchar" MaxLength="2000" />
+    <Property Name="Di_Rechtliche_Regelung" Type="nvarchar" MaxLength="2000" />
+    <Property Name="Di_Praesentationsname" Type="nvarchar" MaxLength="250" />
+    <Property Name="Di_Titel_Englisch" Type="nvarchar" MaxLength="250" />
+    <Property Name="Di_Zusammenfassung" Type="nvarchar" MaxLength="2000" />
+    <Property Name="Di_Zusammenfassung_Englisch" Type="nvarchar" MaxLength="2000" />
+    <Property Name="Di_Typ" Type="nchar" MaxLength="1" />
+    <Property Name="Di_Stichwoerter" Type="nvarchar" MaxLength="200" />
+    <Property Name="Di_Stichwoerter_Englisch" Type="nvarchar" MaxLength="200" />
+    <Property Name="Di_Link_Projektseite" Type="nvarchar" MaxLength="100" />
+    <Property Name="Di_Umfeld" Type="nvarchar" MaxLength="400" />
+    <Property Name="Di_Sperrvermerk" Type="bit" />
+    <Property Name="Di_Schule" Type="int" Nullable="false" />
+    <Property Name="Dis_Ablaufschritt" Type="int" Nullable="false" />
+    <Property Name="Dis_Start" Type="datetime" Nullable="false" />
+    <Property Name="As_Bezeichnung" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="As_Beschreibung" Type="nvarchar" MaxLength="200" />
+    <Property Name="As_Benutzerart" Type="nvarchar" MaxLength="10" Nullable="false" />
+    <Property Name="Akb_Session" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Akb_Benutzerid" Type="int" Nullable="false" />
+    <Property Name="Akb_Benutzername" Type="nvarchar" MaxLength="250" />
+    <Property Name="akb_Benutzeraccount" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="InfoDiplomschritte">
+    <Key>
+      <PropertyRef Name="Di_ID" />
+      <PropertyRef Name="Dis_Ablaufschritt" />
+      <PropertyRef Name="Dis_Start" />
+    </Key>
+    <Property Name="Di_ID" Type="int" Nullable="false" />
+    <Property Name="Di_Titel" Type="nvarchar" MaxLength="250" Nullable="false" />
+    <Property Name="Dis_Ablaufschritt" Type="int" Nullable="false" />
+    <Property Name="Dis_Ben_ID" Type="int" Nullable="false" />
+    <Property Name="Dis_Start" Type="datetime" Nullable="false" />
+    <Property Name="Dis_Kommentar" Type="nvarchar" MaxLength="2000" />
+    <Property Name="As_Order" Type="int" Nullable="false" />
+    <Property Name="As_Bezeichnung" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="As_Beschreibung" Type="nvarchar" MaxLength="200" />
+    <Property Name="As_Benutzerart" Type="nvarchar" MaxLength="10" Nullable="false" />
+    <Property Name="Akb_Session" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Akb_Benutzerid" Type="int" Nullable="false" />
+    <Property Name="Akb_Benutzername" Type="nvarchar" MaxLength="250" />
+    <Property Name="akb_Benutzeraccount" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <Association Name="FK__AktBenutz__Akb_B__7FB5F314">
+    <End Role="Infobenutzer" Type="Self.Infobenutzer" Multiplicity="1" />
+    <End Role="AktBenutzer" Type="Self.AktBenutzer" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Infobenutzer">
+        <PropertyRef Name="Ben_ID" />
+      </Principal>
+      <Dependent Role="AktBenutzer">
+        <PropertyRef Name="Akb_BenutzerID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__DiplBens__Dib_Be__7EC1CEDB">
+    <End Role="Infobenutzer" Type="Self.Infobenutzer" Multiplicity="1" />
+    <End Role="DiplBens" Type="Self.DiplBens" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Infobenutzer">
+        <PropertyRef Name="Ben_ID" />
+      </Principal>
+      <Dependent Role="DiplBens">
+        <PropertyRef Name="Dib_Benutzer" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__InfoDiplo__Di_ID__7DCDAAA2">
+    <End Role="InfoDiplomprojekte" Type="Self.InfoDiplomprojekte" Multiplicity="1" />
+    <End Role="InfoDiplomschritte" Type="Self.InfoDiplomschritte" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="InfoDiplomprojekte">
+        <PropertyRef Name="Di_ID" />
+      </Principal>
+      <Dependent Role="InfoDiplomschritte">
+        <PropertyRef Name="Di_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Function Name="benutzeraccverify" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="benutzer" Type="nvarchar" Mode="In" />
+    <Parameter Name="passwd" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="benutzerlogin" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="benutzer" Type="nvarchar" Mode="In" />
+    <Parameter Name="additiv" Type="bit" Mode="In" />
+  </Function>
+  <Function Name="benutzerlogout" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="benutzer" Type="nvarchar" Mode="In" />
+    <Parameter Name="session" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="DelimitedSplit8K" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="pString" Type="varchar" Mode="In" />
+    <Parameter Name="pDelimiter" Type="char" Mode="In" />
+    <ReturnType>
+      <CollectionType>
+        <RowType>
+          <Property Name="ItemNumber" Type="bigint" />
+          <Property Name="Item" Type="varchar" MaxLength="8000" />
+        </RowType>
+      </CollectionType>
+    </ReturnType>
+  </Function>
+  <Function Name="DiplomprojektInsert" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Di_Abteilung" Type="int" Mode="In" />
+    <Parameter Name="Di_Ausbildungsschwerpunkt" Type="nvarchar" Mode="In" />
+    <Parameter Name="Di_Titel" Type="nvarchar" Mode="In" />
+    <Parameter Name="Di_Untertitel" Type="nvarchar" Mode="In" />
+    <Parameter Name="Di_Aufgabenstellung" Type="nvarchar" Mode="In" />
+    <Parameter Name="Di_Zielsetzung" Type="nvarchar" Mode="In" />
+    <Parameter Name="Di_geplantes_Ergebnis" Type="nvarchar" Mode="In" />
+    <Parameter Name="Di_Meilenstein" Type="nvarchar" Mode="In" />
+    <Parameter Name="Di_Rechtliche_Regelung" Type="nvarchar" Mode="In" />
+    <Parameter Name="Di_Praesentationsname" Type="nvarchar" Mode="In" />
+    <Parameter Name="Di_Titel_Englisch" Type="nvarchar" Mode="In" />
+    <Parameter Name="Di_Zusammenfassung" Type="nvarchar" Mode="In" />
+    <Parameter Name="Di_Zusammenfassung_Englisch" Type="nvarchar" Mode="In" />
+    <Parameter Name="Di_Typ" Type="nchar" Mode="In" />
+    <Parameter Name="Di_Stichwoerter" Type="nvarchar" Mode="In" />
+    <Parameter Name="Di_Stichwoerter_Englisch" Type="nvarchar" Mode="In" />
+    <Parameter Name="Di_Link_Projektseite" Type="nvarchar" Mode="In" />
+    <Parameter Name="Di_Umfeld" Type="nvarchar" Mode="In" />
+    <Parameter Name="Di_Sperrvermerk" Type="bit" Mode="In" />
+    <Parameter Name="Di_Schule" Type="int" Mode="In" />
+    <Parameter Name="schuelerhauptverantwortlich" Type="int" Mode="In" />
+  </Function>
+  <Function Name="Diplschritthoch" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diid" Type="int" Mode="In" />
+    <Parameter Name="kommentar" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="Diplschrittrunter" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diid" Type="int" Mode="In" />
+    <Parameter Name="kommentar" Type="nvarchar" Mode="In" />
+    <Parameter Name="selectedstep" Type="int" Mode="In" />
+  </Function>
+  <Function Name="fn_diagramobjects" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" ReturnType="int" />
+  <Function Name="GetNums" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="n" Type="bigint" Mode="In" />
+    <ReturnType>
+      <CollectionType>
+        <RowType>
+          <Property Name="n" Type="bigint" />
+        </RowType>
+      </CollectionType>
+    </ReturnType>
+  </Function>
+  <Function Name="sp_alterdiagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+    <Parameter Name="version" Type="int" Mode="In" />
+    <Parameter Name="definition" Type="varbinary(max)" Mode="In" />
+  </Function>
+  <Function Name="sp_creatediagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+    <Parameter Name="version" Type="int" Mode="In" />
+    <Parameter Name="definition" Type="varbinary(max)" Mode="In" />
+  </Function>
+  <Function Name="sp_dropdiagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_helpdiagramdefinition" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_helpdiagrams" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_renamediagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+    <Parameter Name="new_diagramname" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="sp_upgraddiagrams" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <EntityContainer Name="abifdiplomdbfinalModelStoreContainer">
+    <EntitySet Name="AktBenutzer" EntityType="Self.AktBenutzer" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="DiplBens" EntityType="Self.DiplBens" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Diplomprojekte" EntityType="Self.Diplomprojekte" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="InfoAbteilungen" EntityType="Self.InfoAbteilungen" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Infobenutzer" EntityType="Self.Infobenutzer" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="InfoDiplomprojekte" EntityType="Self.InfoDiplomprojekte" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="InfoDiplomschritte" EntityType="Self.InfoDiplomschritte" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK__AktBenutz__Akb_B__7FB5F314" Association="Self.FK__AktBenutz__Akb_B__7FB5F314">
+      <End Role="Infobenutzer" EntitySet="Infobenutzer" />
+      <End Role="AktBenutzer" EntitySet="AktBenutzer" />
+    </AssociationSet>
+    <AssociationSet Name="FK__DiplBens__Dib_Be__7EC1CEDB" Association="Self.FK__DiplBens__Dib_Be__7EC1CEDB">
+      <End Role="Infobenutzer" EntitySet="Infobenutzer" />
+      <End Role="DiplBens" EntitySet="DiplBens" />
+    </AssociationSet>
+    <AssociationSet Name="FK__InfoDiplo__Di_ID__7DCDAAA2" Association="Self.FK__InfoDiplo__Di_ID__7DCDAAA2">
+      <End Role="InfoDiplomprojekte" EntitySet="InfoDiplomprojekte" />
+      <End Role="InfoDiplomschritte" EntitySet="InfoDiplomschritte" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

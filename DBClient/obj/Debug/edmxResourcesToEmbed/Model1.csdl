@@ -1,0 +1,359 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="abifdiplomdbfinalModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <ComplexType Name="DelimitedSplit8K_Result">
+    <Property Name="ItemNumber" Type="Int64" />
+    <Property Name="Item" Type="String" MaxLength="8000" FixedLength="false" Unicode="false" />
+  </ComplexType>
+  <ComplexType Name="GetNums_Result">
+    <Property Name="n" Type="Int64" />
+  </ComplexType>
+  <EntityType Name="AktBenutzer">
+    <Key>
+      <PropertyRef Name="Akb_Dbuser" />
+      <PropertyRef Name="Akb_BenutzerID" />
+    </Key>
+    <Property Name="Akb_Dbuser" Type="String" MaxLength="250" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Akb_Session" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Akb_BenutzerID" Type="Int32" Nullable="false" />
+    <Property Name="Akb_Schule" Type="Int32" />
+    <Property Name="Akb_Abteilung" Type="Int32" />
+    <Property Name="Akb_Benutzeraccount" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Akb_Usernewupd" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Akb_Benutzernachname" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="Akb_Benutzervorname" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="Akb_Benutzername" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="Akb_Benutzernamevz" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="Akb_Benutzernametitel" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="Akb_Benutzernametitelvz" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="Akb_User_neu" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Akb_Date_neu" Type="DateTime" Precision="3" />
+    <Property Name="Akb_User_upd" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Akb_Date_upd" Type="DateTime" Precision="3" />
+    <NavigationProperty Name="Infobenutzer" Relationship="Self.FK__AktBenutz__Akb_B__7FB5F314" FromRole="AktBenutzer" ToRole="Infobenutzer" />
+  </EntityType>
+  <EntityType Name="DiplBen">
+    <Key>
+      <PropertyRef Name="Dib_Diplomprojekt" />
+      <PropertyRef Name="Dib_Benutzer" />
+    </Key>
+    <Property Name="Dib_Diplomprojekt" Type="Int32" Nullable="false" />
+    <Property Name="Dib_Benutzer" Type="Int32" Nullable="false" />
+    <Property Name="Dib_Isthauptverantwortlich" Type="Boolean" Nullable="false" />
+    <Property Name="Dib_Datetime_new" Type="DateTime" Precision="3" />
+    <Property Name="Dib_Stundenanzahl" Type="Int32" />
+    <NavigationProperty Name="Infobenutzer" Relationship="Self.FK__DiplBens__Dib_Be__7EC1CEDB" FromRole="DiplBens" ToRole="Infobenutzer" />
+  </EntityType>
+  <EntityType Name="Diplomprojekte">
+    <Key>
+      <PropertyRef Name="Di_ID" />
+    </Key>
+    <Property Name="Di_ID" Type="Int32" Nullable="false" />
+    <Property Name="Di_Abteilung" Type="Int32" Nullable="false" />
+    <Property Name="Di_Ausbildungsschwerpunkt" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="Di_Titel" Type="String" MaxLength="250" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Di_Untertitel" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="Di_Aufgabenstellung" Type="String" MaxLength="2000" FixedLength="false" Unicode="true" />
+    <Property Name="Di_Zielsetzung" Type="String" MaxLength="2000" FixedLength="false" Unicode="true" />
+    <Property Name="Di_geplantes_Ergebnis" Type="String" MaxLength="2000" FixedLength="false" Unicode="true" />
+    <Property Name="Di_Meilenstein" Type="String" MaxLength="2000" FixedLength="false" Unicode="true" />
+    <Property Name="Di_Rechtliche_Regelung" Type="String" MaxLength="2000" FixedLength="false" Unicode="true" />
+    <Property Name="Di_Praesentationsname" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="Di_Titel_Englisch" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="Di_Zusammenfassung" Type="String" MaxLength="2000" FixedLength="false" Unicode="true" />
+    <Property Name="Di_Zusammenfassung_Englisch" Type="String" MaxLength="2000" FixedLength="false" Unicode="true" />
+    <Property Name="Di_Typ" Type="String" MaxLength="1" FixedLength="true" Unicode="true" />
+    <Property Name="Di_Stichwoerter" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="Di_Stichwoerter_Englisch" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="Di_Link_Projektseite" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Di_Umfeld" Type="String" MaxLength="400" FixedLength="false" Unicode="true" />
+    <Property Name="Di_Sperrvermerk" Type="Boolean" />
+    <Property Name="Di_Schule" Type="Int32" Nullable="false" />
+    <Property Name="Dis_Ablaufschritt" Type="Int32" Nullable="false" />
+    <Property Name="Dis_Start" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="As_Bezeichnung" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="As_Beschreibung" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="As_Benutzerart" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Akb_Session" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Akb_Benutzerid" Type="Int32" Nullable="false" />
+    <Property Name="Akb_Benutzername" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="akb_Benutzeraccount" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="InfoAbteilungen">
+    <Key>
+      <PropertyRef Name="Abt_ID" />
+    </Key>
+    <Property Name="Abt_ID" Type="Int32" Nullable="false" />
+    <Property Name="Abt_Bezeichnung" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Abt_AV" Type="Int32" Nullable="false" />
+    <Property Name="Abt_Schule" Type="Int32" Nullable="false" />
+    <Property Name="Ben_Nachname" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="Ben_Vorname" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="Ben_Name" Type="String" MaxLength="501" FixedLength="false" Unicode="true" />
+    <Property Name="Ben_Namevz" Type="String" MaxLength="501" FixedLength="false" Unicode="true" />
+    <Property Name="Ben_Nametitel" Type="String" MaxLength="1003" FixedLength="false" Unicode="true" />
+    <Property Name="Ben_Nametitelvz" Type="String" MaxLength="1003" FixedLength="false" Unicode="true" />
+    <Property Name="Akb_Session" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Akb_Benutzerid" Type="Int32" Nullable="false" />
+    <Property Name="Akb_Benutzername" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="akb_Benutzeraccount" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="Infobenutzer">
+    <Key>
+      <PropertyRef Name="Ben_ID" />
+    </Key>
+    <Property Name="Ben_ID" Type="Int32" Nullable="false" />
+    <Property Name="Ben_Schule" Type="Int32" Nullable="false" />
+    <Property Name="Ben_Titelvor" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="Ben_Vorname" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="Ben_Nachname" Type="String" MaxLength="250" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Ben_Titelnach" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="Ben_Email" Type="String" MaxLength="250" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Ben_Klasse" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Ben_Benutzerart" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="Ben_Accountname" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="Ben_Passwort" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="Ben_Aktiv" Type="Boolean" />
+    <Property Name="Bea_Nr" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Bea_Name" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="Ben_IstinDiplomprojekten" Type="Int32" />
+    <Property Name="Ben_IstAV" Type="Int32" Nullable="false" />
+    <Property Name="Ben_IstDirektor" Type="Int32" Nullable="false" />
+    <Property Name="Ben_IstLsi" Type="Int32" Nullable="false" />
+    <Property Name="Akb_Session" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Akb_Benutzerid" Type="Int32" Nullable="false" />
+    <Property Name="Akb_Benutzername" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="akb_Benutzeraccount" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="AktBenutzers" Relationship="Self.FK__AktBenutz__Akb_B__7FB5F314" FromRole="Infobenutzer" ToRole="AktBenutzer" />
+    <NavigationProperty Name="DiplBens" Relationship="Self.FK__DiplBens__Dib_Be__7EC1CEDB" FromRole="Infobenutzer" ToRole="DiplBens" />
+  </EntityType>
+  <EntityType Name="InfoDiplomprojekte">
+    <Key>
+      <PropertyRef Name="Di_ID" />
+    </Key>
+    <Property Name="Di_ID" Type="Int32" Nullable="false" />
+    <Property Name="Di_Abteilung" Type="Int32" Nullable="false" />
+    <Property Name="Di_Ausbildungsschwerpunkt" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="Di_Titel" Type="String" MaxLength="250" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Di_Untertitel" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="Di_Aufgabenstellung" Type="String" MaxLength="2000" FixedLength="false" Unicode="true" />
+    <Property Name="Di_Zielsetzung" Type="String" MaxLength="2000" FixedLength="false" Unicode="true" />
+    <Property Name="Di_geplantes_Ergebnis" Type="String" MaxLength="2000" FixedLength="false" Unicode="true" />
+    <Property Name="Di_Meilenstein" Type="String" MaxLength="2000" FixedLength="false" Unicode="true" />
+    <Property Name="Di_Rechtliche_Regelung" Type="String" MaxLength="2000" FixedLength="false" Unicode="true" />
+    <Property Name="Di_Praesentationsname" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="Di_Titel_Englisch" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="Di_Zusammenfassung" Type="String" MaxLength="2000" FixedLength="false" Unicode="true" />
+    <Property Name="Di_Zusammenfassung_Englisch" Type="String" MaxLength="2000" FixedLength="false" Unicode="true" />
+    <Property Name="Di_Typ" Type="String" MaxLength="1" FixedLength="true" Unicode="true" />
+    <Property Name="Di_Stichwoerter" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="Di_Stichwoerter_Englisch" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="Di_Link_Projektseite" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Di_Umfeld" Type="String" MaxLength="400" FixedLength="false" Unicode="true" />
+    <Property Name="Di_Sperrvermerk" Type="Boolean" />
+    <Property Name="Di_Schule" Type="Int32" Nullable="false" />
+    <Property Name="Dis_Ablaufschritt" Type="Int32" Nullable="false" />
+    <Property Name="Dis_Start" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="As_Bezeichnung" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="As_Beschreibung" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="As_Benutzerart" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Akb_Session" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Akb_Benutzerid" Type="Int32" Nullable="false" />
+    <Property Name="Akb_Benutzername" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="akb_Benutzeraccount" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="InfoDiplomschrittes" Relationship="Self.FK__InfoDiplo__Di_ID__7DCDAAA2" FromRole="InfoDiplomprojekte" ToRole="InfoDiplomschritte" />
+  </EntityType>
+  <EntityType Name="InfoDiplomschritte">
+    <Key>
+      <PropertyRef Name="Di_ID" />
+      <PropertyRef Name="Dis_Ablaufschritt" />
+      <PropertyRef Name="Dis_Start" />
+    </Key>
+    <Property Name="Di_ID" Type="Int32" Nullable="false" />
+    <Property Name="Di_Titel" Type="String" MaxLength="250" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Dis_Ablaufschritt" Type="Int32" Nullable="false" />
+    <Property Name="Dis_Ben_ID" Type="Int32" Nullable="false" />
+    <Property Name="Dis_Start" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="Dis_Kommentar" Type="String" MaxLength="2000" FixedLength="false" Unicode="true" />
+    <Property Name="As_Order" Type="Int32" Nullable="false" />
+    <Property Name="As_Bezeichnung" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="As_Beschreibung" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="As_Benutzerart" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Akb_Session" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Akb_Benutzerid" Type="Int32" Nullable="false" />
+    <Property Name="Akb_Benutzername" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="akb_Benutzeraccount" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="InfoDiplomprojekte" Relationship="Self.FK__InfoDiplo__Di_ID__7DCDAAA2" FromRole="InfoDiplomschritte" ToRole="InfoDiplomprojekte" />
+  </EntityType>
+  <Association Name="FK__AktBenutz__Akb_B__7FB5F314">
+    <End Role="Infobenutzer" Type="Self.Infobenutzer" Multiplicity="1" />
+    <End Role="AktBenutzer" Type="Self.AktBenutzer" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Infobenutzer">
+        <PropertyRef Name="Ben_ID" />
+      </Principal>
+      <Dependent Role="AktBenutzer">
+        <PropertyRef Name="Akb_BenutzerID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__DiplBens__Dib_Be__7EC1CEDB">
+    <End Role="Infobenutzer" Type="Self.Infobenutzer" Multiplicity="1" />
+    <End Role="DiplBens" Type="Self.DiplBen" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Infobenutzer">
+        <PropertyRef Name="Ben_ID" />
+      </Principal>
+      <Dependent Role="DiplBens">
+        <PropertyRef Name="Dib_Benutzer" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__InfoDiplo__Di_ID__7DCDAAA2">
+    <End Role="InfoDiplomprojekte" Type="Self.InfoDiplomprojekte" Multiplicity="1" />
+    <End Role="InfoDiplomschritte" Type="Self.InfoDiplomschritte" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="InfoDiplomprojekte">
+        <PropertyRef Name="Di_ID" />
+      </Principal>
+      <Dependent Role="InfoDiplomschritte">
+        <PropertyRef Name="Di_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="Entities2" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="AktBenutzers" EntityType="Self.AktBenutzer" />
+    <EntitySet Name="DiplBens" EntityType="Self.DiplBen" />
+    <EntitySet Name="Diplomprojektes" EntityType="Self.Diplomprojekte" />
+    <EntitySet Name="InfoAbteilungens" EntityType="Self.InfoAbteilungen" />
+    <EntitySet Name="Infobenutzers" EntityType="Self.Infobenutzer" />
+    <EntitySet Name="InfoDiplomprojektes" EntityType="Self.InfoDiplomprojekte" />
+    <EntitySet Name="InfoDiplomschrittes" EntityType="Self.InfoDiplomschritte" />
+    <AssociationSet Name="FK__AktBenutz__Akb_B__7FB5F314" Association="Self.FK__AktBenutz__Akb_B__7FB5F314">
+      <End Role="Infobenutzer" EntitySet="Infobenutzers" />
+      <End Role="AktBenutzer" EntitySet="AktBenutzers" />
+    </AssociationSet>
+    <AssociationSet Name="FK__DiplBens__Dib_Be__7EC1CEDB" Association="Self.FK__DiplBens__Dib_Be__7EC1CEDB">
+      <End Role="Infobenutzer" EntitySet="Infobenutzers" />
+      <End Role="DiplBens" EntitySet="DiplBens" />
+    </AssociationSet>
+    <AssociationSet Name="FK__InfoDiplo__Di_ID__7DCDAAA2" Association="Self.FK__InfoDiplo__Di_ID__7DCDAAA2">
+      <End Role="InfoDiplomprojekte" EntitySet="InfoDiplomprojektes" />
+      <End Role="InfoDiplomschritte" EntitySet="InfoDiplomschrittes" />
+    </AssociationSet>
+    <FunctionImport Name="DelimitedSplit8K" ReturnType="Collection(abifdiplomdbfinalModel.DelimitedSplit8K_Result)" IsComposable="true">
+      <Parameter Name="pString" Mode="In" Type="String" />
+      <Parameter Name="pDelimiter" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="GetNums" ReturnType="Collection(abifdiplomdbfinalModel.GetNums_Result)" IsComposable="true">
+      <Parameter Name="n" Mode="In" Type="Int64" />
+    </FunctionImport>
+    <FunctionImport Name="benutzeraccverify" ReturnType="Collection(String)">
+      <Parameter Name="benutzer" Mode="In" Type="String" />
+      <Parameter Name="passwd" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="benutzerlogin" ReturnType="Collection(String)">
+      <Parameter Name="benutzer" Mode="In" Type="String" />
+      <Parameter Name="additiv" Mode="In" Type="Boolean" />
+    </FunctionImport>
+    <FunctionImport Name="benutzerlogout" ReturnType="Collection(Int32)">
+      <Parameter Name="benutzer" Mode="In" Type="String" />
+      <Parameter Name="session" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="DiplomprojektInsert" ReturnType="Collection(abifdiplomdbfinalModel.DiplomprojektInsert_Result)">
+      <Parameter Name="Di_Abteilung" Mode="In" Type="Int32" />
+      <Parameter Name="Di_Ausbildungsschwerpunkt" Mode="In" Type="String" />
+      <Parameter Name="Di_Titel" Mode="In" Type="String" />
+      <Parameter Name="Di_Untertitel" Mode="In" Type="String" />
+      <Parameter Name="Di_Aufgabenstellung" Mode="In" Type="String" />
+      <Parameter Name="Di_Zielsetzung" Mode="In" Type="String" />
+      <Parameter Name="Di_geplantes_Ergebnis" Mode="In" Type="String" />
+      <Parameter Name="Di_Meilenstein" Mode="In" Type="String" />
+      <Parameter Name="Di_Rechtliche_Regelung" Mode="In" Type="String" />
+      <Parameter Name="Di_Praesentationsname" Mode="In" Type="String" />
+      <Parameter Name="Di_Titel_Englisch" Mode="In" Type="String" />
+      <Parameter Name="Di_Zusammenfassung" Mode="In" Type="String" />
+      <Parameter Name="Di_Zusammenfassung_Englisch" Mode="In" Type="String" />
+      <Parameter Name="Di_Typ" Mode="In" Type="String" />
+      <Parameter Name="Di_Stichwoerter" Mode="In" Type="String" />
+      <Parameter Name="Di_Stichwoerter_Englisch" Mode="In" Type="String" />
+      <Parameter Name="Di_Link_Projektseite" Mode="In" Type="String" />
+      <Parameter Name="Di_Umfeld" Mode="In" Type="String" />
+      <Parameter Name="Di_Sperrvermerk" Mode="In" Type="Boolean" />
+      <Parameter Name="Di_Schule" Mode="In" Type="Int32" />
+      <Parameter Name="schuelerhauptverantwortlich" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="Diplschritthoch" ReturnType="Collection(String)">
+      <Parameter Name="diid" Mode="In" Type="Int32" />
+      <Parameter Name="kommentar" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="Diplschrittrunter" ReturnType="Collection(String)">
+      <Parameter Name="diid" Mode="In" Type="Int32" />
+      <Parameter Name="kommentar" Mode="In" Type="String" />
+      <Parameter Name="selectedstep" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_alterdiagram">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+      <Parameter Name="version" Mode="In" Type="Int32" />
+      <Parameter Name="definition" Mode="In" Type="Binary" />
+    </FunctionImport>
+    <FunctionImport Name="sp_creatediagram">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+      <Parameter Name="version" Mode="In" Type="Int32" />
+      <Parameter Name="definition" Mode="In" Type="Binary" />
+    </FunctionImport>
+    <FunctionImport Name="sp_dropdiagram">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_helpdiagramdefinition" ReturnType="Collection(abifdiplomdbfinalModel.sp_helpdiagramdefinition_Result)">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_helpdiagrams" ReturnType="Collection(abifdiplomdbfinalModel.sp_helpdiagrams_Result)">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_renamediagram">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+      <Parameter Name="new_diagramname" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="sp_upgraddiagrams" />
+  </EntityContainer>
+  <ComplexType Name="DiplomprojektInsert_Result">
+    <Property Type="Int32" Name="Di_ID" Nullable="false" />
+    <Property Type="Int32" Name="Di_Abteilung" Nullable="false" />
+    <Property Type="String" Name="Di_Ausbildungsschwerpunkt" Nullable="true" MaxLength="250" />
+    <Property Type="String" Name="Di_Titel" Nullable="false" MaxLength="250" />
+    <Property Type="String" Name="Di_Untertitel" Nullable="true" MaxLength="250" />
+    <Property Type="String" Name="Di_Aufgabenstellung" Nullable="true" MaxLength="2000" />
+    <Property Type="String" Name="Di_Zielsetzung" Nullable="true" MaxLength="2000" />
+    <Property Type="String" Name="Di_geplantes_Ergebnis" Nullable="true" MaxLength="2000" />
+    <Property Type="String" Name="Di_Meilenstein" Nullable="true" MaxLength="2000" />
+    <Property Type="String" Name="Di_Rechtliche_Regelung" Nullable="true" MaxLength="2000" />
+    <Property Type="String" Name="Di_Praesentationsname" Nullable="true" MaxLength="250" />
+    <Property Type="String" Name="Di_Titel_Englisch" Nullable="true" MaxLength="250" />
+    <Property Type="String" Name="Di_Zusammenfassung" Nullable="true" MaxLength="2000" />
+    <Property Type="String" Name="Di_Zusammenfassung_Englisch" Nullable="true" MaxLength="2000" />
+    <Property Type="String" Name="Di_Typ" Nullable="true" MaxLength="1" />
+    <Property Type="String" Name="Di_Stichwoerter" Nullable="true" MaxLength="200" />
+    <Property Type="String" Name="Di_Stichwoerter_Englisch" Nullable="true" MaxLength="200" />
+    <Property Type="String" Name="Di_Link_Projektseite" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="Di_Umfeld" Nullable="true" MaxLength="400" />
+    <Property Type="Boolean" Name="Di_Sperrvermerk" Nullable="true" />
+    <Property Type="Int32" Name="Di_Schule" Nullable="false" />
+  </ComplexType>
+  <ComplexType Name="sp_helpdiagramdefinition_Result">
+    <Property Type="Int32" Name="version" Nullable="true" />
+    <Property Type="Binary" Name="definition" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="sp_helpdiagrams_Result">
+    <Property Type="String" Name="Database" Nullable="true" MaxLength="128" />
+    <Property Type="String" Name="Name" Nullable="false" MaxLength="128" />
+    <Property Type="Int32" Name="ID" Nullable="false" />
+    <Property Type="String" Name="Owner" Nullable="true" MaxLength="128" />
+    <Property Type="Int32" Name="OwnerID" Nullable="false" />
+  </ComplexType>
+</Schema>
