@@ -19,6 +19,7 @@ namespace DBClient
     /// </summary>
     public partial class Window1 : Window
     {
+        String pname;
         public Window1()
         {
             InitializeComponent();
@@ -27,6 +28,7 @@ namespace DBClient
         public Window1(String pname)
         {
             InitializeComponent();
+            this.pname = pname;
             Entities2 db = new Entities2();
 
             var erg = from a in db.InfoDiplomprojektes
@@ -43,8 +45,22 @@ namespace DBClient
 
             grid = new DataGrid();
             grid.DataContext = grid;
-            
 
+            
+            
+        }
+
+        private void addb_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void schrittHoch(Entities2 e,String kommentar)
+        {
+            var id= from a in e.InfoDiplomprojektes
+                    where a.Di_Titel==pname
+                    select a.Di_ID;
+            e.Diplschritthoch(id.First(), kommentar);
         }
     }
 }

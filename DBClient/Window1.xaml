@@ -4,7 +4,7 @@
         Title="Window1" Height="300" Width="300">
     <Grid>
         <DataGrid HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Name="grid"/>
-        <Button Content="Add" Name="addb" HorizontalAlignment="Left" Margin="112,151,0,0" VerticalAlignment="Top" Width="75"/>
+        <Button Content="Add" Name="addb" Click="addb_Click" HorizontalAlignment="Left" Margin="112,151,0,0" VerticalAlignment="Top" Width="75"/>
 
     </Grid>
 </Window>
