@@ -171,7 +171,7 @@
     <Property Name="Akb_Benutzername" Type="nvarchar" MaxLength="250" />
     <Property Name="akb_Benutzeraccount" Type="nvarchar" MaxLength="50" />
   </EntityType>
-  <Association Name="FK__AktBenutz__Akb_B__7FB5F314">
+  <Association Name="FK__AktBenutz__Akb_B__13BCEBC1">
     <End Role="Infobenutzer" Type="Self.Infobenutzer" Multiplicity="1" />
     <End Role="AktBenutzer" Type="Self.AktBenutzer" Multiplicity="*" />
     <ReferentialConstraint>
@@ -183,7 +183,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__DiplBens__Dib_Be__7EC1CEDB">
+  <Association Name="FK__DiplBens__Dib_Be__12C8C788">
     <End Role="Infobenutzer" Type="Self.Infobenutzer" Multiplicity="1" />
     <End Role="DiplBens" Type="Self.DiplBens" Multiplicity="*" />
     <ReferentialConstraint>
@@ -195,7 +195,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__InfoDiplo__Di_ID__7DCDAAA2">
+  <Association Name="FK__InfoDiplo__Di_ID__11D4A34F">
     <End Role="InfoDiplomprojekte" Type="Self.InfoDiplomprojekte" Multiplicity="1" />
     <End Role="InfoDiplomschritte" Type="Self.InfoDiplomschritte" Multiplicity="*" />
     <ReferentialConstraint>
@@ -312,15 +312,15 @@
     <EntitySet Name="Infobenutzer" EntityType="Self.Infobenutzer" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="InfoDiplomprojekte" EntityType="Self.InfoDiplomprojekte" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="InfoDiplomschritte" EntityType="Self.InfoDiplomschritte" Schema="dbo" store:Type="Tables" />
-    <AssociationSet Name="FK__AktBenutz__Akb_B__7FB5F314" Association="Self.FK__AktBenutz__Akb_B__7FB5F314">
+    <AssociationSet Name="FK__AktBenutz__Akb_B__13BCEBC1" Association="Self.FK__AktBenutz__Akb_B__13BCEBC1">
       <End Role="Infobenutzer" EntitySet="Infobenutzer" />
       <End Role="AktBenutzer" EntitySet="AktBenutzer" />
     </AssociationSet>
-    <AssociationSet Name="FK__DiplBens__Dib_Be__7EC1CEDB" Association="Self.FK__DiplBens__Dib_Be__7EC1CEDB">
+    <AssociationSet Name="FK__DiplBens__Dib_Be__12C8C788" Association="Self.FK__DiplBens__Dib_Be__12C8C788">
       <End Role="Infobenutzer" EntitySet="Infobenutzer" />
       <End Role="DiplBens" EntitySet="DiplBens" />
     </AssociationSet>
-    <AssociationSet Name="FK__InfoDiplo__Di_ID__7DCDAAA2" Association="Self.FK__InfoDiplo__Di_ID__7DCDAAA2">
+    <AssociationSet Name="FK__InfoDiplo__Di_ID__11D4A34F" Association="Self.FK__InfoDiplo__Di_ID__11D4A34F">
       <End Role="InfoDiplomprojekte" EntitySet="InfoDiplomprojekte" />
       <End Role="InfoDiplomschritte" EntitySet="InfoDiplomschritte" />
     </AssociationSet>

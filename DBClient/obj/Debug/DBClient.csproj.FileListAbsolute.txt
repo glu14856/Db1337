@@ -19,34 +19,10 @@ C:\Users\Adnan\documents\visual studio 2013\Projects\DBClient\DBClient\obj\Debug
 C:\Users\Adnan\documents\visual studio 2013\Projects\DBClient\DBClient\obj\Debug\Window1.g.cs
 C:\Users\Adnan\documents\visual studio 2013\Projects\DBClient\DBClient\obj\Debug\Window3.baml
 C:\Users\Adnan\documents\visual studio 2013\Projects\DBClient\DBClient\obj\Debug\Window3.g.cs
-<<<<<<< HEAD
 C:\Users\Adnan\Documents\Visual Studio 2013\Projects\DBClient\DBClient\obj\Debug\DetailsWindow.baml
 C:\Users\Adnan\Documents\Visual Studio 2013\Projects\DBClient\DBClient\obj\Debug\DetailsWindow.g.cs
-=======
->>>>>>> 19b14a6f40b24f790de47f860ceec90c427f30c5
-C:\Users\Adnan\Dropbox\DBClient\DBClient\bin\Debug\DBClient.exe.config
-C:\Users\Adnan\Dropbox\DBClient\DBClient\obj\Debug\DBClient.exe
-C:\Users\Adnan\Dropbox\DBClient\DBClient\obj\Debug\DBClient.pdb
-C:\Users\Raphael\Desktop\DBClient\DBClientNeu\DBClient\bin\Debug\DBClient.exe.config
-C:\Users\Raphael\Desktop\DBClient\DBClientNeu\DBClient\obj\Debug\DBClient.exe
-C:\Users\Raphael\Desktop\DBClient\DBClientNeu\DBClient\obj\Debug\DBClient.pdb
-C:\Users\Raphael\Desktop\DBClient\DBClientNeu\DBClient\bin\Debug\DBClient.exe
-C:\Users\Raphael\Desktop\DBClient\DBClientNeu\DBClient\bin\Debug\DBClient.pdb
-C:\Users\Raphael\Desktop\DBClient\DBClientNeu\DBClient\bin\Debug\EntityFramework.dll
-C:\Users\Raphael\Desktop\DBClient\DBClientNeu\DBClient\bin\Debug\EntityFramework.SqlServer.dll
-C:\Users\Raphael\Desktop\DBClient\DBClientNeu\DBClient\bin\Debug\EntityFramework.xml
-C:\Users\Raphael\Desktop\DBClient\DBClientNeu\DBClient\bin\Debug\EntityFramework.SqlServer.xml
-C:\Users\Raphael\Desktop\DBClient\DBClientNeu\DBClient\obj\Debug\DBClient.csprojResolveAssemblyReference.cache
-C:\Users\Raphael\Desktop\DBClient\DBClientNeu\DBClient\obj\Debug\DetailsWindow.baml
-C:\Users\Raphael\Desktop\DBClient\DBClientNeu\DBClient\obj\Debug\MainWindow.baml
-C:\Users\Raphael\Desktop\DBClient\DBClientNeu\DBClient\obj\Debug\Window1.baml
-C:\Users\Raphael\Desktop\DBClient\DBClientNeu\DBClient\obj\Debug\Window3.baml
-C:\Users\Raphael\Desktop\DBClient\DBClientNeu\DBClient\obj\Debug\DetailsWindow.g.cs
-C:\Users\Raphael\Desktop\DBClient\DBClientNeu\DBClient\obj\Debug\MainWindow.g.cs
-C:\Users\Raphael\Desktop\DBClient\DBClientNeu\DBClient\obj\Debug\Window1.g.cs
-C:\Users\Raphael\Desktop\DBClient\DBClientNeu\DBClient\obj\Debug\Window3.g.cs
-C:\Users\Raphael\Desktop\DBClient\DBClientNeu\DBClient\obj\Debug\App.g.cs
-C:\Users\Raphael\Desktop\DBClient\DBClientNeu\DBClient\obj\Debug\DBClient_MarkupCompile.cache
-C:\Users\Raphael\Desktop\DBClient\DBClientNeu\DBClient\obj\Debug\DBClient.g.resources
-C:\Users\Raphael\Desktop\DBClient\DBClientNeu\DBClient\obj\Debug\DBClient.Properties.Resources.resources
-C:\Users\Raphael\Desktop\DBClient\DBClientNeu\DBClient\obj\Debug\DBClient.csproj.GenerateResource.Cache
+C:\Users\Adnan\Documents\Visual Studio 2013\Projects\DBClient\DBClient\obj\Debug\AddProject.baml
+C:\Users\Adnan\Documents\Visual Studio 2013\Projects\DBClient\DBClient\obj\Debug\AddProject.g.cs
+C:\Users\Raphael\Desktop\DBClient\DBClient\DBClient\bin\Debug\DBClient.exe.config
+C:\Users\Raphael\Desktop\DBClient\DBClient\DBClient\obj\Debug\DBClient.exe
+C:\Users\Raphael\Desktop\DBClient\DBClient\DBClient\obj\Debug\DBClient.pdb

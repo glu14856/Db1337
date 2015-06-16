@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-  <EntityContainerMapping StorageEntityContainer="abifdiplomdbfinalModelStoreContainer" CdmEntityContainer="Entities2">
+  <EntityContainerMapping StorageEntityContainer="abifdiplomdbfinalModelStoreContainer" CdmEntityContainer="Entities1">
     <EntitySetMapping Name="AktBenutzers">
       <EntityTypeMapping TypeName="abifdiplomdbfinalModel.AktBenutzer">
         <MappingFragment StoreEntitySet="AktBenutzer">

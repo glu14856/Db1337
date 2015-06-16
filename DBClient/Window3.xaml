@@ -1,11 +1,13 @@
 ﻿<Window x:Class="DBClient.Window3"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-
         Title="Window3" Height="454.384" Width="578.334">
     <StackPanel Name="sp" HorizontalAlignment="Left" Tag="fegit" Height="326" Margin="19,42,0,0" VerticalAlignment="Top" Width="496" Button.Click="anyButtonClicked">
         <TextBlock TextWrapping="Wrap" Text="Übericht"/>
+        <Button Content="Diplomprojekt hinzufügen" Name="add" />
+        <Button Content="aktualisieren" Name="add_2" />
     </StackPanel>
+    
 
 
 

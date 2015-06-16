@@ -19,7 +19,7 @@ namespace DBClient
     /// </summary>
     public partial class MainWindow : Window
     {
-        Entities2 db = new Entities2();
+        Entities1 db = new Entities1();
         Window1 w1=new Window1();
         public MainWindow()
         {

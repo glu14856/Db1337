@@ -4,17 +4,17 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="ffa6928439d8477cbb70bbaffa2dfc5c" Name="Diagram1" ZoomLevel="66">
+      <Diagram DiagramId="0ff2149bc07a46a7a40f3292ec29ea2e" Name="Diagram1" ZoomLevel="92">
         <EntityTypeShape EntityType="abifdiplomdbfinalModel.AktBenutzer" Width="1.5" PointX="3" PointY="4.125" IsExpanded="true" />
         <EntityTypeShape EntityType="abifdiplomdbfinalModel.DiplBen" Width="1.5" PointX="3" PointY="1.25" IsExpanded="true" />
         <EntityTypeShape EntityType="abifdiplomdbfinalModel.Diplomprojekte" Width="1.5" PointX="7.75" PointY="7.75" IsExpanded="true" />
         <EntityTypeShape EntityType="abifdiplomdbfinalModel.InfoAbteilungen" Width="1.5" PointX="0.75" PointY="9.75" IsExpanded="true" />
         <EntityTypeShape EntityType="abifdiplomdbfinalModel.Infobenutzer" Width="1.5" PointX="0.75" PointY="2.125" IsExpanded="true" />
-        <EntityTypeShape EntityType="abifdiplomdbfinalModel.InfoDiplomprojekte" Width="1.875" PointX="5.75" PointY="1.125" IsExpanded="true" />
-        <EntityTypeShape EntityType="abifdiplomdbfinalModel.InfoDiplomschritte" Width="2.5" PointX="8" PointY="2.75" IsExpanded="true" />
-        <AssociationConnector Association="abifdiplomdbfinalModel.FK__AktBenutz__Akb_B__7FB5F314" ManuallyRouted="false" />
-        <AssociationConnector Association="abifdiplomdbfinalModel.FK__DiplBens__Dib_Be__7EC1CEDB" ManuallyRouted="false" />
-        <AssociationConnector Association="abifdiplomdbfinalModel.FK__InfoDiplo__Di_ID__7DCDAAA2" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="abifdiplomdbfinalModel.InfoDiplomprojekte" Width="1.5" PointX="5.75" PointY="1.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="abifdiplomdbfinalModel.InfoDiplomschritte" Width="1.5" PointX="8" PointY="2.75" IsExpanded="true" />
+        <AssociationConnector Association="abifdiplomdbfinalModel.FK__AktBenutz__Akb_B__13BCEBC1" ManuallyRouted="false" />
+        <AssociationConnector Association="abifdiplomdbfinalModel.FK__DiplBens__Dib_Be__12C8C788" ManuallyRouted="false" />
+        <AssociationConnector Association="abifdiplomdbfinalModel.FK__InfoDiplo__Di_ID__11D4A34F" ManuallyRouted="false" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

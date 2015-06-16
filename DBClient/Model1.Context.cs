@@ -15,10 +15,10 @@ namespace DBClient
     using System.Data.Entity.Core.Objects;
     using System.Linq;
     
-    public partial class Entities2 : DbContext
+    public partial class Entities1 : DbContext
     {
-        public Entities2()
-            : base("name=Entities2")
+        public Entities1()
+            : base("name=Entities1")
         {
         }
     
@@ -35,7 +35,7 @@ namespace DBClient
         public virtual DbSet<InfoDiplomprojekte> InfoDiplomprojektes { get; set; }
         public virtual DbSet<InfoDiplomschritte> InfoDiplomschrittes { get; set; }
     
-        [DbFunction("Entities2", "DelimitedSplit8K")]
+        [DbFunction("Entities1", "DelimitedSplit8K")]
         public virtual IQueryable<DelimitedSplit8K_Result> DelimitedSplit8K(string pString, string pDelimiter)
         {
             var pStringParameter = pString != null ?
@@ -46,17 +46,17 @@ namespace DBClient
                 new ObjectParameter("pDelimiter", pDelimiter) :
                 new ObjectParameter("pDelimiter", typeof(string));
     
-            return ((IObjectContextAdapter)this).ObjectContext.CreateQuery<DelimitedSplit8K_Result>("[Entities2].[DelimitedSplit8K](@pString, @pDelimiter)", pStringParameter, pDelimiterParameter);
+            return ((IObjectContextAdapter)this).ObjectContext.CreateQuery<DelimitedSplit8K_Result>("[Entities1].[DelimitedSplit8K](@pString, @pDelimiter)", pStringParameter, pDelimiterParameter);
         }
     
-        [DbFunction("Entities2", "GetNums")]
+        [DbFunction("Entities1", "GetNums")]
         public virtual IQueryable<GetNums_Result> GetNums(Nullable<long> n)
         {
             var nParameter = n.HasValue ?
                 new ObjectParameter("n", n) :
                 new ObjectParameter("n", typeof(long));
     
-            return ((IObjectContextAdapter)this).ObjectContext.CreateQuery<GetNums_Result>("[Entities2].[GetNums](@n)", nParameter);
+            return ((IObjectContextAdapter)this).ObjectContext.CreateQuery<GetNums_Result>("[Entities1].[GetNums](@n)", nParameter);
         }
     
         public virtual ObjectResult<string> benutzeraccverify(string benutzer, string passwd)
